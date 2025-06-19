@@ -1,0 +1,49 @@
+<mat-card class="form-card" @fadeIn>
+    <mat-card-header class="gradient-header">
+        <mat-card-title class="header-title">Signup</mat-card-title>
+    </mat-card-header>
+
+    <mat-card-content>
+        <form [formGroup]="signupForm" (ngSubmit)="onSubmit()" class="auth-form">
+            <mat-form-field appearance="outline" class="form-field">
+                <mat-label>Name</mat-label>
+                <mat-icon matPrefix>person</mat-icon>
+                <input matInput formControlName="name">
+                @if (signupForm.get('name')?.hasError('required')) {
+                    <mat-error>Name is required</mat-error>
+                }
+            </mat-form-field>
+
+            <mat-form-field appearance="outline" class="form-field">
+                <mat-label>Email</mat-label>
+                <mat-icon matPrefix>email</mat-icon>
+                <input matInput formControlName="email">
+                @if (signupForm.get('email')?.hasError('required')) {
+                    <mat-error>Email is required</mat-error>
+                }
+                @if (signupForm.get('email')?.hasError('email')) {
+                    <mat-error>Invalid email</mat-error>
+                }
+            </mat-form-field>
+
+            <mat-form-field appearance="outline" class="form-field">
+                <mat-label>Password</mat-label>
+                <mat-icon matPrefix>lock</mat-icon>
+                <input matInput type="password" formControlName="password">
+                @if (signupForm.get('password')?.hasError('required')) {
+                    <mat-error>Password is required</mat-error>
+                }
+                @if (signupForm.get('password')?.hasError('minlength')) {
+                    <mat-error>Password must be at least 6 characters</mat-error>
+                }
+            </mat-form-field>
+
+            <div class="form-actions">
+                <button mat-raised-button color="primary" type="submit" [disabled]="signupForm.invalid" class="action-button">
+                    <mat-icon>person_add</mat-icon>
+                    Signup
+                </button>
+            </div>
+        </form>
+    </mat-card-content>
+</mat-card>

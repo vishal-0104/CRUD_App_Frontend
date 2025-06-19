@@ -1,0 +1,157 @@
+.user-form-card {
+    max-width: 500px;
+    margin: 0 auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    background-color: white;
+}
+
+.gradient-header {
+    background: linear-gradient(90deg, #673ab7, #9c27b0);
+    color: white;
+    padding: 16px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.header-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+mat-card-content {
+    padding: 24px;
+    background-color: #2a2a2a;
+}
+
+.user-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-field {
+    width: 100%;
+}
+
+.form-field mat-label {
+    color: #b0b0b0;
+}
+
+.form-field input,
+.form-field mat-select { /* Added mat-select */
+    color: #ffffff;
+}
+
+mat-icon[matPrefix] {
+    margin-right: 8px;
+    color: #9c27b0;
+}
+
+mat-error {
+    color: #ff5252;
+    font-size: 12px;
+}
+
+.info-text {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #ff4081;
+    font-size: 14px;
+    margin: 0;
+    background-color: rgba(255, 64, 129, 0.1);
+    padding: 8px;
+    border-radius: 4px;
+}
+
+.info-icon {
+    font-size: 18px;
+    color: #ff4081;
+}
+
+.form-actions {
+    display: flex;
+    gap: 16px;
+    justify-content: flex-end;
+}
+
+.action-button {
+    padding: 8px 16px;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: transform 0.2s, background-color 0.3s;
+}
+
+.action-button mat-icon {
+    margin-right: 8px;
+}
+
+.action-button[color="primary"] {
+    background-color: #9c27b0;
+    color: white;
+}
+
+.action-button[color="warn"] {
+    background-color: #ff5252;
+    color: white;
+}
+
+.action-button:hover {
+    transform: scale(1.05);
+}
+
+.action-button[color="primary"]:hover {
+    background-color: #ab47bc;
+}
+
+.action-button[color="warn"]:hover {
+    background-color: #ff6e6e;
+}
+
+.light-theme .user-form-card {
+    background-color: #ffffff;
+}
+
+.light-theme mat-card-content {
+    background-color: #f5f5f5;
+}
+
+.light-theme .form-field mat-label {
+    color: #333333;
+}
+
+.light-theme .form-field input,
+.light-theme .form-field mat-select { /* Added mat-select */
+    color: #000000;
+}
+
+.light-theme .info-text {
+    color: #d81b60;
+    background-color: rgba(216, 27, 96, 0.1);
+}
+
+.light-theme .info-icon {
+    color: #d81b60;
+}
+
+@media (max-width: 600px) {
+    .user-form-card {
+        max-width: 100%;
+        margin: 16px;
+    }
+
+    .header-title {
+        font-size: 1.5rem;
+    }
+
+    .form-actions {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .action-button {
+        width: 100%;
+    }
+}

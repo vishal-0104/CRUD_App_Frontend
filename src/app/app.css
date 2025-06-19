@@ -1,0 +1,91 @@
+.sidenav-container {
+    height: 100vh;
+}
+
+.sidenav {
+    width: 250px;
+    background-color: #2a2a2a;
+    color: white;
+}
+
+.sidenav-content {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.toolbar {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 0 16px;
+    background: linear-gradient(90deg, #673ab7, #9c27b0);
+}
+
+.title {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.spacer {
+    flex: 1 1 auto;
+}
+
+.menu-button {
+    margin-right: 16px;
+}
+
+.desktop-links {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1rem;
+    transition: background-color 0.3s, color 0.3s;
+    color: white; /* Ensure sidenav links are white */
+}
+
+.nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.nav-link mat-icon {
+    margin-right: 8px;
+}
+
+.active-link {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    font-weight: 600;
+}
+
+.main-container {
+    max-width: 1200px;
+    margin: 32px auto;
+    padding: 0 16px;
+}
+
+@media (max-width: 768px) {
+    .desktop-links {
+        display: none;
+    }
+    .menu-button {
+        display: block;
+    }
+}
+
+.user-greeting {
+    margin-right: 16px;
+    font-size: 1rem;
+    color: #ffffff;
+}
+
+@media (min-width: 769px) {
+    .menu-button {
+        display: none;
+    }
+}
